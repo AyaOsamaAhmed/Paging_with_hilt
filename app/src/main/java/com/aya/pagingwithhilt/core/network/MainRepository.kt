@@ -13,7 +13,8 @@ import javax.inject.Singleton
 @Singleton
 class MainRepository @Inject constructor(private val apiService: ApiService) {
 
-    suspend fun getPhotos(params : PhotosParams?): NetworkResponse<BaseResponse<BasePagingResponse<PhotosResponseItem>>, ErrorResponse> =
+    suspend fun getPhotos(params : PhotosParams?):
+            NetworkResponse<BaseResponse<BasePagingResponse<PhotosResponseItem>>, ErrorResponse> =
         apiService.getPhotos(params.toHashMapParams()!!)
 
 

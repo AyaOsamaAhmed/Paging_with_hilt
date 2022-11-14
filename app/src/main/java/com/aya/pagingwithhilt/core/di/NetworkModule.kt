@@ -22,6 +22,7 @@ annotation class AuthInterceptorOkHttpClient
 @Module
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
+
     @Singleton
     @Provides
     fun provideAuthRetrofit(okHttpClient: OkHttpClient): Retrofit {
